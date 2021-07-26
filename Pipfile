@@ -6,6 +6,7 @@ name = "pypi"
 [packages]
 django = "==3.1"
 garpixcms = ">=1.0.0"
+instabot = "*"
 
 [dev-packages]
 
