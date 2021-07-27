@@ -24,8 +24,8 @@ INSTALLED_APPS = [
 Также, добавьте переменные окружения (файл `.env`) значениями, полученными от profitbase.ru:
 
 ```bash
-INST_USERNAME=???
-INST_PASSWORD=???
+INSTAGRAM_USERNAME=???
+INSTAGRAM_PASSWORD=???
 ```
 
 Также, в settings.py необходимо добавить миксины:
