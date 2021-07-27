@@ -7,7 +7,7 @@ import shutil
 
 class Instagram(object):
 
-    def __init__(self, username=os.getenv('INST_USERNAME'), password=os.getenv('INST_PASSWORD')):
+    def __init__(self, username=os.getenv('INSTAGRAM_USERNAME'), password=os.getenv('INSTAGRAM_PASSWORD')):
         self.username = username
         self.password = password
         cookie_del = glob.glob("config/*cookie.json")
