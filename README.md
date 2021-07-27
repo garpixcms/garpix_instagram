@@ -1,48 +1,65 @@
-# GarpixCMS Empty Template
+# Garpix Instagram
 
-Cookiecutter template for GarpixCMS == 1.0.0.
+Пакет интеграции с instagram.com
 
-## Install
+## Быстрый старт
 
-1. Install Docker and docker-compose.
-   
-For Debian, Ubuntu:
+Установка:
 
-```
-su
-apt update; apt upgrade -y; apt install -y curl; curl -sSL https://get.docker.com/ | sh; curl -L https://github.com/docker/compose/releases/download/1.28.2/docker-compose-$(uname -s)-$(uname -m) -o /usr/local/bin/docker-compose && chmod +x /usr/local/bin/docker-compose
+```bash
+pip install garpix_instagram
 ```
 
-Don't forget press CTRL+D to exit from super user account.
+Добавьте `garpix_instagram` в `INSTALLED_APPS`:
 
-2. Apply environment variables:
+```python
+# settings.py
 
-```
-cp example.env .env
-```
-
-3. Change a random string for `SECRET_KEY` and `POSTGRES_PASSWORD` in `.env`.
-
-4. Install dependencies:
-
-```
-pipenv install
-pipenv shell
+INSTALLED_APPS = [
+    # ...
+    'garpix_instagram',
+]
 ```
 
-5. Up docker-compose, migrate database and create super user:
+Также, добавьте переменные окружения (файл `.env`) значениями, полученными от profitbase.ru:
 
-```
-docker-compose up -d
-python3 backend/manage.py makemigrations
-python3 backend/manage.py migrate
-python3 backend/manage.py createsuperuser
+```bash
+INST_USERNAME=???
+INST_PASSWORD=???
 ```
 
-6. Run the server:
+Также, в settings.py необходимо добавить миксины:
+
+```bash
+GARPIX_INSTAGRAM_POST_MIXIN = 'garpix_instagram.models.empty_mixin.EmptyMixin'
+```
+
+
+## Использование
+
+Для получения данных от инстаграма используйте следующую manage.py команду:
 
 ```
-python3 backend/manage.py runserver
+python3 backend/manage.py start_inst
 ```
 
-7. Enjoy!
+## Дополнительно
+Может потребоваться команда
+```
+sudo apt install firefox-geckodriver
+```
+# Changelog
+
+Смотри [CHANGELOG.md](CHANGELOG.md).
+
+# Contributing
+
+Смотри [CONTRIBUTING.md](CONTRIBUTING.md).
+
+# License
+
+[MIT](LICENSE)
+
+---
+
+Developed by Garpix / [https://garpix.com](https://garpix.com)
