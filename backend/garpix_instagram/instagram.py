@@ -25,6 +25,7 @@ class Instagram:
         hashtag_list = []
         instagram_posts_bulk_create = []
         for hashtag in hashtags:
+            print(hashtag)
             hashtag_list.append(hashtag['title'])
         posts = self.bot.get_hashtag_medias(hashtag_list, filtration=False)
         for post in posts:
