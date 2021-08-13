@@ -33,7 +33,7 @@ class Instagram:
             kwargs = {
                 'user_name': username,
                 'user_image': media_info['user']['profile_pic_url'],
-                'user_link': 'https://www.instagram.com/' + username + '/',
+                'user_link': f'https://www.instagram.com/{username}/',
                 'post_link': f'https://www.instagram.com/p/{media_info["code"]}/',
                 'like_count': media_info['like_count'],
                 'post_image': media_info['image_versions2']['candidates'][0]['url'],
