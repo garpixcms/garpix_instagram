@@ -2,7 +2,6 @@ from django.db import models
 from django.conf import settings
 from django.utils.module_loading import import_string
 from garpix_utils.file import get_file_path
-from django.core.validators import RegexValidator
 
 InstagramPostMixin = import_string(settings.GARPIX_INSTAGRAM_POST_MIXIN)
 
