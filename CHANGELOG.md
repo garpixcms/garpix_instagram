@@ -1,3 +1,8 @@
+1.1.2 (06.10.2021)
+
+- added post_save signal for InstagramPost model.
+- changed __init__ file into app garpix_instagram
+
 1.1.1 (06.10.2021)
 
 - change instagram_post fields parameter blank from True to False
