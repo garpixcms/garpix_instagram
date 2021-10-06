@@ -6,4 +6,4 @@ class GarpixInstagramConfig(AppConfig):
     verbose_name = 'Garpix Instagram'
 
     def ready(self):
-        import property.signals  # noqa
+        import garpix_instagram.signals  # noqa
