@@ -12,7 +12,7 @@ class InstagramPost(InstagramPostMixin, models.Model):
                                    upload_to=get_file_path)
     post_link = models.CharField(max_length=1000, verbose_name='Ссылка на пост', null=True)
     post_image = models.ImageField(verbose_name="Изображение поста", null=True, upload_to=get_file_path)
-    like_count = models.PositiveIntegerField(verbose_name='Количество лайков', null=True)
+    like_count = models.PositiveIntegerField(verbose_name='Количество лайков', default=0)
     active = models.BooleanField(default=False, verbose_name='Отображать пост?')
 
     def __str__(self):
